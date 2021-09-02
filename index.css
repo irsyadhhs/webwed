@@ -1,0 +1,517 @@
+@font-face {
+    font-family: 'HeroFont';
+    src: url('./assets/fonts/hello-pirates.otf'); /* IE9 Compat Modes */
+}
+
+@font-face {
+    font-family: 'TimeFont';
+    src: url('./assets/fonts/olympus.ttf'); /* IE9 Compat Modes */
+}
+
+@font-face {
+    font-family: 'LetterForL';
+    src: url('./assets/fonts/lforl.ttf'); /* IE9 Compat Modes */
+}
+
+@font-face {
+    font-family: 'Shirley';
+    src: url('./assets/fonts/shirley.ttf'); /* IE9 Compat Modes */
+}
+
+@font-face {
+    font-family: 'Ocean';
+    src: url('./assets/fonts/ocean_sunshine.otf'); /* IE9 Compat Modes */
+}
+
+#loading {
+    position: fixed;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.97;
+    background-color: #fff;
+    z-index: 99;
+}
+
+#loading-image {
+    width: 100px;
+    height: auto;
+    z-index: 100;
+}
+
+html,body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+    scroll-behavior: smooth;
+}
+body {
+    font-family: -apple-system, 
+        BlinkMacSystemFont, 
+        "Segoe UI", 
+        Roboto, 
+        Oxygen-Sans, 
+        Ubuntu, 
+        Cantarell, 
+        "Helvetica Neue", 
+        sans-serif;
+    padding-bottom: 80px;
+}
+.d-block-animate-man{
+    opacity: 1;
+    visibility: visible;
+    -webkit-transition: opacity 3000ms, visibility 3000ms;
+    transition: opacity 3000ms, visibility 3000ms;
+}
+.d-block-animate-woman{
+    opacity: 1;
+    visibility: visible;
+    -webkit-transition: opacity 5000ms, visibility 5000ms;
+    transition: opacity 5000ms, visibility 5000ms;
+}
+.d-none-animate{
+    opacity: 0;
+    visibility: hidden;
+}
+.hero{
+    display: flex;
+    position: relative;
+}
+.hero-img{
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    height: inherit;
+}
+.hero-title{
+    position: absolute;
+    color: rgb(218,165,32);
+    top: 47vh;
+    left: 45%;
+}
+.hero-title-man{
+    font-family: 'HeroFont';
+    font-size: 7vw;
+    font-weight: 800;
+    position: absolute;
+    top: 50vh;
+    left: 40%;
+}
+.hero-title-woman{
+    font-family: 'HeroFont';
+    font-size: 7vw;
+    font-weight: 800;
+    position: absolute;
+    top: 60vh;
+    left: 50%;
+}
+.wed-timer{
+    text-align: center;
+    font-size: 6vw;
+}
+.wed-timer-container{
+    text-align: center;
+    font-size: 2vw;
+}
+
+.datetime-container {
+    background-image: url('./assets/img/invitation-bg.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0 auto;
+    text-align: center;
+    padding: 3rem;
+}
+
+.greeting-container {
+    background-image: url('./assets/img/invitation-white.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0 auto;
+}
+
+.greeting-headline{
+    text-align: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.greeting-img{
+    width: 200px;
+    height: 200px;
+    border: 0px;
+    margin-top: 0px;
+    border-radius: 100px;
+    object-fit: cover;
+    object-position: center;
+}
+
+#countdown ul{
+    margin: 0;
+    padding: 0;
+}
+#countdown .row [class*="col-"] {
+    display: inline-block;
+    font-size: 1.5em;
+    list-style-type: none;
+    padding: 1em;
+    text-transform: lowercase;
+}
+
+#countdown .row [class*="col-"] span {
+    display: block;
+    font-size: 4.5rem;
+}
+
+.location{
+    background-color: red;
+}
+
+.date-time{
+    background-color: blue;
+}
+
+.greeting-name{
+    font-family: 'HeroFont';
+    font-size: 2.5vw;
+    line-height: 50px;
+}
+
+.mapouter{
+    position:relative;
+    text-align:right;
+    height:500px;
+    width:100%;
+}
+.gmap_canvas {
+    overflow:hidden;
+    background:none!important;
+    height:500px;
+    width:100%;
+}
+
+.location-container {
+    background-image: url('./assets/img/invitation-white.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-color: #e9e9e9; */
+    padding: 3rem;
+}
+
+.map-container {
+    background-image: url('./assets/img/invitation-white.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-color: #dadada; */
+    padding: 3rem;
+}
+
+.location-detail-container {
+    /* background-color: #dfdfdf; */
+    background-image: url('./assets/img/invitation-white.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 3rem;
+}
+.location-detail-item {
+    background-color: rgba(48, 59, 61, 0.2);
+    border-radius: 25px;
+    padding: 15px;
+    margin-bottom: 15px;
+    font-size: 1.25vw;
+}
+.nav-bottom{
+    width: 50%;
+    text-align: center;
+}
+.navbar {
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-bottom: 10px;
+    border-radius: 25px;
+}
+.title-section{
+    font-family: 'Ocean'!important;
+    color: rgb(218,165,32);
+    font-size: 3vw;
+}
+.flower{
+    width: 200px;
+}
+.gallery-row {
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+    padding: 3rem;
+    text-align: center;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+    -ms-flex: 25%; /* IE10 */
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+}
+
+.column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+    border-radius: 36px;
+}
+
+.column img:hover{
+    transform: scale(1.25);
+    -webkit-transition: transform 600ms;
+    transition: transform 600ms;
+    cursor: pointer;
+}
+
+.greeting-detail{
+    line-height: 30px;
+    font-family: 'Segoe UI';
+}
+
+.comments{
+    background-image: url('./assets/img/invitation-white.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#amplop-online{
+    border-radius: 20px;
+    width: 50%;
+}
+
+@media only screen 
+and (min-device-width: 375px) 
+and (max-device-width: 812px) 
+and (-webkit-min-device-pixel-ratio: 3){ 
+    .navbar {
+        margin-left: 0!important;
+        margin-right: 0!important;
+        margin-bottom: 0!important;
+        border-radius: 0!important;
+    }
+    #countdown .row [class*="col-"] {
+        font-size: .75rem!important;
+        padding: .25!important;
+    }
+
+    #countdown .row [class*="col-"] span {
+        font-size: 1.75rem!important;
+    }
+    .hero-title{
+        top: 100px!important;
+        left: 20%!important;
+    }
+    .hero-title-man{
+        top: 120px!important;
+    }
+    .hero-title-woman{
+        top: 140px!important;
+    }
+    .greeting-name{
+        font-size: 40px!important;
+    }
+    .location-detail-item {
+        font-size: 3.5vw!important;
+    }
+    .greeting-img{
+        margin-top: 40px!important;
+    }
+    .title-section{
+        font-size: 6vw!important;
+    }
+    .map-container{
+        padding: 0px!important;
+    }
+    .location-container {
+        padding: 1rem!important;
+    }
+    .location-detail-container{
+        padding: 0.5rem!important;
+    }
+    .flower{
+        width: 100px!important;
+    }
+    .gallery{
+        padding: 0px!important;
+    }
+    .gallery-item{
+        width: 100%!important;
+    }
+    #amplop-online{
+        width: 80%;
+        margin: 1rem;
+    }
+}
+
+@media only screen 
+and (min-device-width: 360px) 
+and (max-device-width: 800px) 
+and (-webkit-min-device-pixel-ratio: 3) {
+    .navbar {
+        margin-left: 0!important;
+        margin-right: 0!important;
+        margin-bottom: 0!important;
+        border-radius: 0!important;
+    }
+    #countdown .row [class*="col-"] {
+        font-size: .75rem!important;
+        padding: .25!important;
+    }
+
+    #countdown .row [class*="col-"] span {
+        font-size: 1.75rem!important;
+    }
+    .hero-title{
+        top: 100px!important;
+        left: 20%!important;
+    }
+    .hero-title-man{
+        top: 120px!important;
+    }
+    .hero-title-woman{
+        top: 140px!important;
+    }
+    .greeting-name{
+        font-size: 40px!important;
+    }
+    .location-detail-item {
+        font-size: 3.5vw!important;
+    }
+    .greeting-img{
+        margin-top: 40px!important;
+    }
+    .title-section{
+        font-size: 6vw!important;
+    }
+    .map-container{
+        padding: 0px!important;
+    }
+    .location-container {
+        padding: 1rem!important;
+    }
+    .location-detail-container{
+        padding: 0.5rem!important;
+    }
+    .flower{
+        width: 100px!important;
+    }
+    .gallery{
+        padding: 0px!important;
+    }
+    .gallery-item{
+        width: 100%!important;
+    }
+    #amplop-online{
+        width: 80%;
+        margin: 1rem;
+    }
+}
+
+@media only screen 
+and (min-device-width: 360px) 
+and (max-device-width: 640px) 
+and (-webkit-min-device-pixel-ratio: 2) {
+    .navbar {
+        margin-left: 0!important;
+        margin-right: 0!important;
+        margin-bottom: 0!important;
+        border-radius: 0!important;
+    }
+    #countdown .row [class*="col-"] {
+        font-size: .75rem!important;
+        padding: .25!important;
+    }
+
+    #countdown .row [class*="col-"] span {
+        font-size: 1.75rem!important;
+    }
+    .hero-title{
+        top: 100px!important;
+        left: 20%!important;
+    }
+    .hero-title-man{
+        top: 120px!important;
+    }
+    .hero-title-woman{
+        top: 140px!important;
+    }
+    .greeting-name{
+        font-size: 40px!important;
+    }
+    .location-detail-item {
+        font-size: 3.5vw!important;
+    }
+    .greeting-img{
+        margin-top: 40px!important;
+    }
+    .title-section{
+        font-size: 6vw!important;
+    }
+    .map-container{
+        padding: 0px!important;
+    }
+    .location-container {
+        padding: 1rem!important;
+    }
+    .location-detail-container{
+        padding: 0.5rem!important;
+    }
+    .flower{
+        width: 100px!important;
+    }
+    .gallery{
+        padding: 0px!important;
+    }
+    .gallery-item{
+        width: 100%!important;
+    }
+    #amplop-online{
+        width: 80%;
+        margin: 1rem;
+    }
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+    .column {
+        -ms-flex: 50%;
+        flex: 50%;
+        max-width: 50%;
+    }
+    .gallery-row{
+        padding: .5rem!important;
+    }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .column {
+        -ms-flex: 100%;
+        flex: 100%;
+        max-width: 100%;
+    }
+    .gallery-row{
+        padding: .5rem!important;
+    }
+}
